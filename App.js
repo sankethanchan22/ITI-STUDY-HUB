@@ -53,7 +53,7 @@ const tradesList = document.getElementById("tradesList");
 
 allTrades.forEach(trade => {
   const card = document.createElement("div");
-  card.className = "card";
+  card.className = "card trade-item-card";
   card.onclick = () => openTradeDetails(trade);
   card.innerHTML = `<span>🔧</span><h3>${trade}</h3><p>Explore this trade</p>`;
   tradesList.appendChild(card);
@@ -82,7 +82,7 @@ document.getElementById("langBtn")
     t.mock, t.practical, t.formula
   ];
 
-  document.querySelectorAll(".card h3").forEach((el, i) => {
+  document.querySelectorAll(".card:not(.trade-item-card) h3").forEach((el, i) => {
     el.textContent = names[i];
   });
 
