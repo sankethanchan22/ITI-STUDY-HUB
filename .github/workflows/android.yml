@@ -19,7 +19,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: npm
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -30,10 +29,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Android project
+      - name: Install Capacitor CLI
+        run: npm install --save-dev @capacitor/cli
+
+      - name: Prepare web assets
         run: |
-          npx cap add android
-          npx cap sync android
+          mkdir -p www
+          cp index.html style.css App.js manifest.json service-worker.js www/
+
+      - name: Create Android project
+        run: ./node_modules/.bin/cap add android
+
+      - name: Sync Capacitor
+        run: ./node_modules/.bin/cap sync android
+
+      - name: Build APK
+        run: |
           cd android
           chmod +x gradlew
           ./gradlew assembleDebug
@@ -43,3 +54,4 @@ jobs:
         with:
           name: ITI-Study-Hub-APK
           path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
