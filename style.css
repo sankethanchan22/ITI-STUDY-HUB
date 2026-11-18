@@ -1,0 +1,164 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0b1220;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding-bottom: 90px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #111c2e;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #42c8ff;
+}
+
+button {
+  background: #173c58;
+  color: white;
+  border: 1px solid #42c8ff;
+  padding: 9px 14px;
+  border-radius: 10px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.welcome {
+  background: linear-gradient(135deg, #123c62, #202b53);
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  border: 1px solid #315a82;
+}
+
+.welcome p {
+  color: #c1d9ed;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.welcome h1 {
+  font-size: 29px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.welcome h1 span {
+  color: #42c8ff;
+}
+
+.search {
+  margin-bottom: 25px;
+}
+
+.search input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #293d55;
+  background: #152236;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+h2 {
+  font-size: 21px;
+  margin-bottom: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.card {
+  background: #152236;
+  border: 1px solid #263b54;
+  border-radius: 17px;
+  padding: 19px 13px;
+  min-height: 145px;
+  transition: 0.2s;
+}
+
+.card:active {
+  transform: scale(0.96);
+  background: #203b58;
+}
+
+.card span {
+  font-size: 30px;
+}
+
+.card h3 {
+  margin-top: 13px;
+  font-size: 16px;
+}
+
+.card p {
+  color: #a5b6ca;
+  font-size: 12px;
+  margin-top: 7px;
+}
+
+.notice {
+  background: #142c3d;
+  border: 1px solid #285b77;
+  padding: 20px;
+  margin-top: 25px;
+  border-radius: 16px;
+}
+
+.notice h3 {
+  color: #42c8ff;
+  margin-bottom: 10px;
+}
+
+.notice p {
+  font-size: 13px;
+  color: #c0d1df;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #111c2e;
+  border-top: 1px solid #263b54;
+  display: flex;
+  justify-content: space-around;
+  padding: 13px 5px;
+}
+
+.bottom-nav span {
+  text-align: center;
+  font-size: 20px;
+  color: #42c8ff;
+}
+
+.bottom-nav small {
+  display: block;
+  font-size: 10px;
+  color: #c0d1df;
+  margin-top: 5px;
+}

@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <title>ITI Study Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#101827">
+<body>
+
+  <header class="header">
+    <div class="logo">🎓 ITI STUDY HUB</div>
+    <button id="langBtn">ಕನ್ನಡ</button>
+  </header>
+
+  <main class="container">
+    <section id="tradeDetails" style="display:none;">
+  <button onclick="closeTradeDetails()">⬅ Back</button>
+
+  <h1 id="tradeTitle">Trade Name</h1>
+  <p id="tradeDescription">Explore your ITI trade.</p>
+
+  <div class="grid">
+    <div class="card" onclick="openCourseDetails()">
+      <span>📚</span>
+      <h3>Course Details</h3>
+      <p>Course information and syllabus</p>
+    </div>
+
+    <div class="card">
+      <span>📖</span>
+      <h3>Study Notes</h3>
+      <p>Learn important topics</p>
+    </div>
+
+    <div class="card">
+      <span>🧠</span>
+      <h3>MCQ Practice</h3>
+      <p>Test your knowledge</p>
+    </div>
+
+    <div class="card">
+      <span>⚙️</span>
+      <h3>Practical Guide</h3>
+      <p>Explore practical topics</p>
+    </div>
+  </div>
+    </section>
+
+
+    <div id="homePage">
+  <section class="welcome">
+      <p>WELCOME TO YOUR LEARNING SPACE</p>
+      <h1>Learn Skills.<br><span>Build Your Future.</span></h1>
+      <p>ನಿಮ್ಮ ITI ಕಲಿಕೆಯ ಹೊಸ ಪ್ರಪಂಚ!</p>
+    </section>
+
+    <section class="search">
+      <input type="search" id="searchInput"
+        placeholder="Search your trade...">
+    </section>
+
+    <h2>Explore Learning</h2>
+    <section id="tradesSection">
+  <h2>All ITI Trades</h2>
+  <div id="tradesList" class="grid"></div>
+    </section>
+
+    <section class="grid">
+      <div class="card" onclick="openSection('Trades')">
+        <span>🔧</span>
+        <h3>ITI Trades</h3>
+        <p>Explore all trades</p>
+      </div>
+
+      <div class="card" onclick="openSection('Notes')">
+        <span>📚</span>
+        <h3>Study Notes</h3>
+        <p>Learn every day</p>
+      </div>
+
+      <div class="card" onclick="openSection('MCQ')">
+        <span>🧠</span>
+        <h3>MCQ Practice</h3>
+        <p>Test your knowledge</p>
+      </div>
+
+      <div class="card" onclick="openSection('Mock Tests')">
+        <span>📝</span>
+        <h3>Mock Tests</h3>
+        <p>Prepare for exams</p>
+      </div>
+
+      <div class="card" onclick="openSection('Practical Guide')">
+        <span>⚙️</span>
+        <h3>Practical Guide</h3>
+        <p>Learn workshop skills</p>
+      </div>
+
+      <div class="card" onclick="openSection('Formula Book')">
+        <span>📐</span>
+        <h3>Formula Book</h3>
+        <p>Technical formulas</p>
+      </div>
+    </section>
+
+    <section class="notice">
+      <h3>✨ Your Future Starts Here</h3>
+      <p>Study smarter. Practice better. Grow stronger.</p>
+    </section>
+    </div>
+    <section id="courseDetails" style="display:none;">
+  <button onclick="closeCourseDetails()">⬅ Back</button>
+  <h1>Course Details</h1>
+  <p>Explore your ITI course information.</p>
+</section>
+  </main>
+
+  <nav class="bottom-nav">
+    <span>🏠<small>Home</small></span>
+    <span>📖<small>Learn</small></span>
+    <span>🧪<small>Practice</small></span>
+    <span>👤<small>Profile</small></span>
+  </nav>
+
+  <script src="App.js"></script>
+  <script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/service-worker.js")
+      .then(() => console.log("App Ready!"))
+      .catch(error => console.log(error));
+  });
+}
+  </script>
+</body>
+</html>
