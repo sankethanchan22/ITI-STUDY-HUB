@@ -107,3 +107,13 @@ function closeCourseDetails() {
   document.getElementById("courseDetails").style.display = "none";
   document.getElementById("tradeDetails").style.display = "block";
 }
+function openYearDetails(year) {
+  document.getElementById("tradeDetails").style.display = "none";
+  document.getElementById("yearDetails").style.display = "block";
+  document.getElementById("yearTitle").textContent = year;
+}
+
+function closeYearDetails() {
+  document.getElementById("yearDetails").style.display = "none";
+  document.getElementById("tradeDetails").style.display = "block";
+    }
